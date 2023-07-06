@@ -1,6 +1,5 @@
 // import { test } from './signal.js';
-
-const words = [ "crime", "glory", "water", "break", "thank", "curve", "title", "quota", "child", "vague", "voice", "grind", "reign", "opera", "utter", "still", "weave", "trace", "power", "light", "ratio", "witch", "faith", "doubt", "fling", "merit", "cater", "budge", "aloof", "uncle", "right", "price", "quote", "stake", "thumb", "study", "first", "tract", "widen", "wrong", "thick", "rifle", "class", "cheat", "owner", "guide", "march", "clash", "cheap", "claim", "funny", "story", "crane", "hello" ];
+import { words } from './words.js';
 
 const state = {
     guesses: [],
@@ -85,4 +84,14 @@ document.addEventListener("keydown", (event) => {
             state.setGuess(currentGuess.slice(0, -1), state.guesses.length - 1);
         }
     }
+});
+ 
+document.querySelectorAll(".keyboard-row > button").forEach((el) => {
+    el.addEventListener("click", (event) => {
+        const keyboardEvent = new KeyboardEvent("keydown", {
+            key: event.target.dataset.letterval,
+        });
+
+        document.dispatchEvent(keyboardEvent);
+    });
 });
