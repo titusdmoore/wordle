@@ -1,0 +1,86 @@
+body {
+    background: #121213;
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+body > * {
+    padding: 0 10%;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.quesses {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.guess {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 25%;
+    margin: auto;
+}
+
+.guess > div {
+    border: 2px solid gray;
+    width: 1rem;
+    height: 1rem;
+    padding: 1rem;
+    margin: 0.3rem 0;
+}
+
+.guess > div.correct {
+    background: green;
+    border: 2px solid green;
+}
+
+.guess > div.wrong-place {
+    background: orange;
+    border: 2px solid orange;
+}
+
+.guess > div.wrong {
+    background: gray;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+}
+
+.letters {
+    max-width: 50%;
+    margin: auto;
+}
+
+.keyboard-row > .letter {
+    border: 2px solid gray;
+    width: 2.5rem;
+    height: 3rem;
+    margin: 0.2rem 0.2rem;
+    cursor: pointer;
+    border-radius: .2rem;
+    background: gray;
+    display: block;
+}
+
+.keyboard-row > .letter.wide {
+    width: fit-content;
+}
+
+.letter {
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
